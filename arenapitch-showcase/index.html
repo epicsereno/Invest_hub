@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ArenaPitch is a Shark Tank inspired platform for public pitch discovery, private investor rooms, and structured deal negotiation."
+    />
+    <title>ArenaPitch Showcase</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#arena" aria-label="ArenaPitch home">
+        <span class="brand-mark">AP</span>
+        <span>ArenaPitch</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#arena">Arena</a>
+        <a href="#deals">Deals</a>
+        <a href="#investors">Investors</a>
+        <a href="#roadmap">Roadmap</a>
+      </nav>
+      <a class="topbar-action" href="#pitch-builder">Create Pitch</a>
+    </header>
+
+    <main>
+      <section class="hero" id="arena">
+        <div class="hero-media" aria-hidden="true">
+          <img
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=82"
+            alt=""
+          />
+        </div>
+        <div class="hero-content">
+          <p class="eyebrow">Public discovery. Private negotiation. Structured deal flow.</p>
+          <h1>ArenaPitch</h1>
+          <p class="hero-copy">
+            A Shark Tank inspired workspace where inventors launch video pitches, investors evaluate traction, and both
+            sides negotiate offers with a clean audit trail.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#pitch-builder">Build a Pitch</a>
+            <a class="button secondary" href="#investors">Investor Dashboard</a>
+          </div>
+          <div class="hero-stats" aria-label="ArenaPitch demo metrics">
+            <div>
+              <strong>128</strong>
+              <span>Active pitches</span>
+            </div>
+            <div>
+              <strong>$18.4M</strong>
+              <span>Demo funding ask</span>
+            </div>
+            <div>
+              <strong>42</strong>
+              <span>Investor rooms</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Arena workspace">
+        <aside class="sidebar">
+          <div>
+            <p class="section-label">Arena Mode</p>
+            <div class="segmented" role="tablist" aria-label="Arena mode">
+              <button class="segment active" type="button" data-arena="public">Public</button>
+              <button class="segment" type="button" data-arena="private">Private</button>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <p class="section-label">Filters</p>
+            <label>
+              Category
+              <select id="category-filter">
+                <option value="all">All categories</option>
+                <option value="Consumer Hardware">Consumer Hardware</option>
+                <option value="Climate Tech">Climate Tech</option>
+                <option value="Health">Health</option>
+              </select>
+            </label>
+            <label>
+              Funding Stage
+              <select id="stage-filter">
+                <option value="all">All stages</option>
+                <option value="Prototype">Prototype</option>
+                <option value="Pilot">Pilot</option>
+                <option value="Revenue">Revenue</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="access-panel">
+            <p class="section-label">Private Arena</p>
+            <div class="access-row">
+              <span>NDA Gate</span>
+              <strong>On</strong>
+            </div>
+            <div class="access-row">
+              <span>Invite Control</span>
+              <strong>Owner</strong>
+            </div>
+            <div class="access-row">
+              <span>Watermarked Decks</span>
+              <strong>On</strong>
+            </div>
+          </div>
+        </aside>
+
+        <section class="feed">
+          <div class="feed-header">
+            <div>
+              <p class="section-label">Live Pitch Feed</p>
+              <h2 id="feed-title">Public Arena</h2>
+            </div>
+            <button class="icon-button" type="button" aria-label="Refresh feed" id="refresh-feed">
+              <span aria-hidden="true">↻</span>
+            </button>
+          </div>
+          <div class="pitch-grid" id="pitch-grid"></div>
+        </section>
+      </section>
+
+      <section class="split-section" id="deals">
+        <div class="section-copy">
+          <p class="section-label">Deal Room</p>
+          <h2>Offers, counters, syndicates, and final terms stay in one negotiation trail.</h2>
+          <p>
+            The backend deal module is ready for CQRS flows: make offer, counter offer, accept deal, withdraw offer,
+            and read optimized deal history for founders and investors.
+          </p>
+        </div>
+        <div class="deal-board" aria-label="Deal negotiation sample">
+          <div class="deal-row">
+            <span>Initial offer</span>
+            <strong>$250K for 8%</strong>
+          </div>
+          <div class="deal-row active">
+            <span>Founder counter</span>
+            <strong>$250K for 5%</strong>
+          </div>
+          <div class="deal-row">
+            <span>Syndicate interest</span>
+            <strong>3 investors</strong>
+          </div>
+          <div class="deal-row">
+            <span>Status</span>
+            <strong>Countered</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="investor-section" id="investors">
+        <div class="section-heading">
+          <p class="section-label">Investor Dashboard</p>
+          <h2>Compare momentum before entering the room.</h2>
+        </div>
+        <div class="metric-grid">
+          <article>
+            <span>Average traction score</span>
+            <strong>84</strong>
+          </article>
+          <article>
+            <span>Open offers</span>
+            <strong>19</strong>
+          </article>
+          <article>
+            <span>Private rooms</span>
+            <strong>7</strong>
+          </article>
+          <article>
+            <span>Close rate target</span>
+            <strong>12%</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="pitch-builder" id="pitch-builder">
+        <div class="builder-preview">
+          <img
+            src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1100&q=82"
+            alt="Founders reviewing a pitch deck around a laptop"
+          />
+        </div>
+        <form class="builder-form">
+          <p class="section-label">Pitch Builder</p>
+          <h2>Draft the essentials.</h2>
+          <label>
+            Pitch title
+            <input type="text" value="SmartCrate Modular Cooler" />
+          </label>
+          <label>
+            Funding ask
+            <input type="text" value="$350,000 for 6%" />
+          </label>
+          <label>
+            Arena
+            <select>
+              <option>Public Arena</option>
+              <option>Private Arena</option>
+            </select>
+          </label>
+          <button class="button primary" type="button">Save Draft</button>
+        </form>
+      </section>
+
+      <section class="roadmap" id="roadmap">
+        <p class="section-label">Roadmap</p>
+        <div class="timeline">
+          <div>
+            <span>01</span>
+            <h3>MVP</h3>
+            <p>Roles, pitch creation, public feed, and CQRS deal module.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <h3>Private Rooms</h3>
+            <p>NDA gates, investor invites, watermarked assets, and room analytics.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <h3>Live Tank</h3>
+            <p>Real-time Q&A, syndication, and counter-offer workflows.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>ArenaPitch showcase</span>
+      <a href="./docs/PITCH-DECK.md">Pitch Deck</a>
+      <a href="./docs/ROADMAP.md">Roadmap</a>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
