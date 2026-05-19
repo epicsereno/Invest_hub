@@ -1,0 +1,114 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  INVENTOR
+  INVESTOR
+  ADMIN
+}
+
+enum ArenaType {
+  PUBLIC
+  PRIVATE
+}
+
+enum PitchStatus {
+  DRAFT
+  SUBMITTED
+  LIVE
+  ARCHIVED
+}
+
+enum OfferStatus {
+  OPEN
+  COUNTERED
+  ACCEPTED
+  DECLINED
+  WITHDRAWN
+}
+
+model User {
+  id             String         @id @default(cuid())
+  email          String         @unique
+  name           String
+  passwordHash   String
+  role           UserRole
+  company        String?
+  pitches        Pitch[]        @relation("InventorPitches")
+  offers         Offer[]        @relation("InvestorOffers")
+  counterOffers  CounterOffer[] @relation("CounterOfferCreator")
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+}
+
+model Arena {
+  id          String    @id @default(cuid())
+  name        String
+  type        ArenaType
+  ndaRequired Boolean   @default(false)
+  inviteOnly  Boolean   @default(false)
+  pitches     Pitch[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Pitch {
+  id            String      @id @default(cuid())
+  title         String
+  summary       String
+  category      String
+  arenaType     ArenaType
+  status        PitchStatus @default(SUBMITTED)
+  fundingAsk    Float
+  equityOffered Float?
+  videoUrl      String?
+  deckUrl       String?
+  inventorId    String
+  inventor      User        @relation("InventorPitches", fields: [inventorId], references: [id])
+  arenaId       String?
+  arena         Arena?      @relation(fields: [arenaId], references: [id])
+  offers        Offer[]
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+}
+
+model Offer {
+  id            String         @id @default(cuid())
+  pitchId       String
+  pitch         Pitch          @relation(fields: [pitchId], references: [id])
+  investorId    String
+  investor      User           @relation("InvestorOffers", fields: [investorId], references: [id])
+  amount        Float
+  equity        Float
+  terms         String
+  status        OfferStatus    @default(OPEN)
+  counterOffers CounterOffer[]
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+}
+
+model CounterOffer {
+  id          String   @id @default(cuid())
+  offerId     String
+  offer       Offer    @relation(fields: [offerId], references: [id])
+  createdById String
+  createdBy   User     @relation("CounterOfferCreator", fields: [createdById], references: [id])
+  amount      Float
+  equity      Float
+  terms       String
+  createdAt   DateTime @default(now())
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  type      String
+  payload   Json
+  readAt    DateTime?
+  createdAt DateTime @default(now())
+}

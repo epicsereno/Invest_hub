@@ -1,0 +1,30 @@
+{
+  "discussions": [
+    {
+      "ventureId": "smartpipe-diagnostics",
+      "author": "John Doe",
+      "role": "Shark",
+      "text": "How do you plan to handle the installation barrier for non-technical homeowners? Even 'clip-on' sensors can be intimidating.",
+      "id": "sgz2fu80y",
+      "timestamp": "2026-05-16T07:22:58.211Z"
+    },
+    {
+      "ventureId": "smartpipe-diagnostics",
+      "author": "Jane Doe",
+      "role": "Pitcher",
+      "text": "Great question, John. We're partnering with local hardware stores to offer 'SmartPipe Certified' installation for a flat $49 fee, but the app also features an AR guide that has a 95% success rate in our pilots.",
+      "id": "0tij3mxhg",
+      "timestamp": "2026-05-16T07:22:58.212Z"
+    }
+  ],
+  "investments": [
+    {
+      "ventureId": "smartpipe-diagnostics",
+      "investorName": "John Doe",
+      "amount": 250000,
+      "type": "Equity",
+      "id": "3f7pvhmqc",
+      "timestamp": "2026-05-16T07:22:58.212Z"
+    }
+  ]
+}

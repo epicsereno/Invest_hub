@@ -1,0 +1,102 @@
+[
+  {
+    "id": "ameripipe-national",
+    "name": "AmeriPipe National: The $1 Infrastructure Play",
+    "tagline": "Securing 309 million homes for the price of a candy bar.",
+    "category": "Infrastructure",
+    "fundingGoal": 867592,
+    "currentFunding": 677951,
+    "activityScore": 42,
+    "description": "Securing 309 million homes for the price of a candy bar."
+  },
+  {
+    "id": "codecollab-vr",
+    "name": "CodeCollab VR",
+    "tagline": "Pair programming is hard in 2D. We bring the office to your headset.",
+    "category": "Remote Work",
+    "fundingGoal": 1832089,
+    "currentFunding": 145592,
+    "activityScore": 47,
+    "description": "Pair programming is hard in 2D. We bring the office to your headset."
+  },
+  {
+    "id": "hvac-as-a-service",
+    "name": "HVAC-as-a-Service (HaaS)",
+    "tagline": "We don't sell AC units; we sell 72 degrees.",
+    "category": "Infrastructure",
+    "fundingGoal": 2075139,
+    "currentFunding": 30260,
+    "activityScore": 73,
+    "description": "We don't sell AC units; we sell 72 degrees."
+  },
+  {
+    "id": "microlease-offices",
+    "name": "MicroLease Offices",
+    "tagline": "The 'Airbnb' for 1-hour office slots.",
+    "category": "Wellness",
+    "fundingGoal": 2320603,
+    "currentFunding": 440066,
+    "activityScore": 60,
+    "description": "The 'Airbnb' for 1-hour office slots."
+  },
+  {
+    "id": "privacyshield",
+    "name": "PrivacyShield",
+    "tagline": "Keep your home life private, even on camera.",
+    "category": "Remote Work",
+    "fundingGoal": 801409,
+    "currentFunding": 363581,
+    "activityScore": 69,
+    "description": "Keep your home life private, even on camera."
+  },
+  {
+    "id": "remoteteam-bond",
+    "name": "RemoteTeam Bond",
+    "tagline": "No more awkward virtual happy hours.",
+    "category": "Team",
+    "fundingGoal": 943080,
+    "currentFunding": 628820,
+    "activityScore": 76,
+    "description": "No more awkward virtual happy hours."
+  },
+  {
+    "id": "skillswap-remote",
+    "name": "SkillSwap Remote",
+    "tagline": "Internal mobility for the remote world.",
+    "category": "Team",
+    "fundingGoal": 2260564,
+    "currentFunding": 181735,
+    "activityScore": 94,
+    "description": "Internal mobility for the remote world."
+  },
+  {
+    "id": "smartpipe-diagnostics",
+    "name": "SmartPipe Remote Diagnostics",
+    "tagline": "The plumber who's always there, but never in your bathroom.",
+    "category": "Infrastructure",
+    "fundingGoal": 1129185,
+    "currentFunding": 899135,
+    "activityScore": 57,
+    "description": "The plumber who's always there, but never in your bathroom."
+  },
+  {
+    "id": "synctime",
+    "name": "SyncTime",
+    "tagline": "Timezones are the enemy. SyncTime is the peace treaty.",
+    "category": "Remote Work",
+    "fundingGoal": 1954776,
+    "currentFunding": 1889519,
+    "activityScore": 74,
+    "description": "Timezones are the enemy. SyncTime is the peace treaty."
+  },
+  {
+    "id": "zenworkspace",
+    "name": "ZenWorkspace",
+    "tagline": "Your desk should care about your health as much as your boss does.",
+    "category": "Wellness",
+    "fundingGoal": 1450934,
+    "currentFunding": 6619,
+    "activityScore": 6,
+    "description": "Your desk should care about your health as much as your boss does."
+  }
+]
